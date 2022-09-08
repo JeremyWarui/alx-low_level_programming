@@ -15,6 +15,6 @@ int main(void)
 
 	puts(my_string);
 
-	return 0;
+	return (0);
 
 }
