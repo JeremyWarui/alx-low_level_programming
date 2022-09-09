@@ -16,9 +16,9 @@ int main(void)
 		for (one = '0'; one <= '9'; one++)
 		{
 			/* second pair */
-			for (i = '0'; i <= '9'; i++)
+			for (i = ten; i <= '9'; i++)
 			{
-				for (j = '0'; j <= '9'; j++)
+				for (j = (one + 1); j <= '9'; j++)
 				{
 					putchar(ten);
 					putchar(one);
