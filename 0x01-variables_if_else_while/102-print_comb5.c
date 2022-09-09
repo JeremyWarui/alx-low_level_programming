@@ -18,7 +18,7 @@ int main(void)
 			/* second pair */
 			for (i = ten; i <= '9'; i++)
 			{
-				for (j = (one + 1); j <= '9'; j++)
+				for (j = one + 1; j <= '9'; j++)
 				{
 					putchar(ten);
 					putchar(one);
@@ -42,4 +42,3 @@ int main(void)
 	return (0);
 
 }
-
