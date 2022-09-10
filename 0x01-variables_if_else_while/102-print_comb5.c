@@ -8,33 +8,26 @@
 
 int main(void)
 {
-	int ten, one, i, j;
+	int num1, num2;
 
-	/* first pair */
-	for (ten = '0'; ten <= '9'; ten++)
+	for (num1 = 0; num1 <= 98; num1++)
 	{
-		for (one = '0'; one <= '9'; one++)
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
-			/* second pair */
-			for (i = ten; i <= '9'; i++)
-			{
-				for (j = one + 1; j <= '9'; j++)
-				{
-					putchar(ten);
-					putchar(one);
-					putchar(' ');
-					putchar(i);
-					putchar(j);
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
 
-					if (!((ten == '9' && one == '8') && (i == '9' && j == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				j = '0';
+			if (num1 == 98 && num2 == 99)
+			{
+				continue;
 			}
+			putchar(',');
+			putchar(' ');
 		}
+
 	}
 
 	putchar('\n');
@@ -42,12 +35,3 @@ int main(void)
 	return (0);
 
 }
-
-
-
-
-
-
-
-
-
