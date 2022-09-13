@@ -4,13 +4,19 @@
 
 /**
 * _putchar - Prints character and outputs to stdout
-* @a: the character to output
+* @c: the character to output
 *
 * Return: 1 for success and -1 for err
 */
 
-int _putchar(char a);
+int _putchar(char c);
 
+/**
+* print_alphabet - Prints al alphabets in lowercase
+*Return: void is returned
+*/
+
+void print_alphabet(void);
 
 
 
