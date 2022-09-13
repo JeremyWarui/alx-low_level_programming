@@ -47,4 +47,17 @@ int _isalpha(int c);
   */
 
 int print_sign(int n);
+
+/**
+  * _abs - Print absolute value of an integer
+  * @int: data type for parameter
+  * Return: 0 for success
+  */
+
+int _abs(int);
+
+
+
+
+
 #endif
