@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-* _abs(int) - Prints the absolute value of an integer
-* @int: the integerto get absolute value
+* _abs - Prints the absolute value of an integer
+* @c: the integer to get absolute value
 * Return: 0 for success
 */
 
 int _abs(int c)
 {
-	if (c > 0) 
+	if (c > 0)
 	{
 		return (c);
 	}
