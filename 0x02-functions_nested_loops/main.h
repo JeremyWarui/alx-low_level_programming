@@ -91,6 +91,13 @@ int add(int, int);
   */
 void print_to_98(int n);
 
+/**
+  * print_times_table - print n times table starting with 0
+  * @n: paramet descriptor
+  * Return: void
+  */
+void print_times_table(int n);
+
 
 
 
