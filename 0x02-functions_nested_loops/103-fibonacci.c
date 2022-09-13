@@ -8,7 +8,6 @@
 
 int main(void)
 {
-	int c;
 	long int n1, n2, fn;
 	long int sum;
 
