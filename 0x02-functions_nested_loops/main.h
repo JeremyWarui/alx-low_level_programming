@@ -56,7 +56,13 @@ int print_sign(int n);
 
 int _abs(int);
 
+/**
+* print_last_digit - print the last digit
+* @int: data type of parameter
+* Return: value of last digit
+*/
 
+int print_last_digit(int);
 
 
 
