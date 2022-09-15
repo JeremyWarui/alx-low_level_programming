@@ -151,4 +151,15 @@ void more_numbers(void);
 
 void print_line(int n);
 
+/**
+  * print_diagonal - Print diagonal line
+  * @n: no of line length
+  * Return: void
+  */
+
+void print_diagonal(int n);
+
+
+
 #endif
+
