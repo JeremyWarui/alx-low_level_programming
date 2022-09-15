@@ -159,6 +159,13 @@ void print_line(int n);
 
 void print_diagonal(int n);
 
+/**
+  * print_square - Print square
+  * @size: size of square
+  * Return: void
+  */
+
+void print_square(int size);
 
 
 #endif
