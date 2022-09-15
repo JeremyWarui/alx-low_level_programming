@@ -174,5 +174,12 @@ void print_square(int size);
   */
 void print_triangle(int size);
 
+/**
+  * print_number - Prints an integer
+  * @n: integer to print
+  * Return: void
+  */
+void print_number(int n);
+
 #endif
 
