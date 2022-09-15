@@ -121,4 +121,24 @@ int _isdigit(int c);
   */
 
 int mul(int a, int b);
+
+/**
+  * print_numbers - Print numbers only from 0 to 9
+  * Return: void
+  */
+
+void print_numbers(void);
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endif
