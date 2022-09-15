@@ -113,4 +113,12 @@ int _isupper(int c);
   */
 int _isdigit(int c);
 
+/**
+  * mul - Multiply the two integers
+  * @a: first integer
+  * @b: second integer
+  * Return: result of tje multiplication
+  */
+
+int mul(int a, int b);
 #endif
