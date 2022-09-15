@@ -129,9 +129,12 @@ int mul(int a, int b);
 
 void print_numbers(void);
 
+/**
+  * print_most_numbers - Print all numbers from 0 - 9 except 2 & 4
+  * Return: void
+  */
 
-
-
+void print_most_numbers(void);
 
 
 
