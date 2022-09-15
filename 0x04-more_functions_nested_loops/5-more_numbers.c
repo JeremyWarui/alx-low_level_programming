@@ -15,12 +15,19 @@ void more_numbers(void)
 	{
 		for (c = 0; c <= 14; c++)
 		{
+			int n;
+
 			if ((c / 10) > 0)
 			{
-				_putchar((c / 10) + '0');
+				n = c / 10;
+				_putchar(n + '0');
 			}
-			_putchar((c % 10) + '0');
+
+			n = c % 10;
+			_putchar(n + '0');
+
 		}
 		_putchar('\n');
+
 	}
 }
