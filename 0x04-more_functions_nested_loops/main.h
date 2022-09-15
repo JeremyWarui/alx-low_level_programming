@@ -106,5 +106,11 @@ void print_times_table(int n);
 
 int _isupper(int c);
 
+/**
+  * _isdigit - Check if a character is a digit
+  * @c: character to check
+  * Return: 1 if true, 0 if not
+  */
+int _isdigit(int c);
 
 #endif
