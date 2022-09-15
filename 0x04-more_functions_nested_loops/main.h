@@ -136,11 +136,12 @@ void print_numbers(void);
 
 void print_most_numbers(void);
 
+/**
+  * more_numbers - Print all numbers from 0 - 14 ten times
+  * Return: void
+  */
 
-
-
-
-
+void more_numbers(void);
 
 
 
