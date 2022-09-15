@@ -23,7 +23,7 @@ void print_number(int n)
 		while (bucket <= number)
 			bucket *= 10;
 		tens = bucket / 10;
-		
+
 		while (tens >= 1)
 		{
 			digit = number / tens;
