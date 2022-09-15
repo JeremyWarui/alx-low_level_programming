@@ -167,6 +167,12 @@ void print_diagonal(int n);
 
 void print_square(int size);
 
+/**
+  * print_triangle - Print triangle
+  * @size: integer to determine size of triangle
+  * Return: Void
+  */
+void print_triangle(int size);
 
 #endif
 
