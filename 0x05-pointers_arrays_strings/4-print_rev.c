@@ -13,20 +13,17 @@ void print_rev(char *s)
 	int len;
 	int i;
 
-	for (len = 0; *s != '\0'; len++)
-	{
-		s++;
-	}
+	for (len = 0; s[len] != '\0'; len++)
+		;
 
 
 	/* reverse string using the length */
 	/* last element = len - 1 */
 
 
-	for (i = len; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 	{
-		_putchar(*s);
-		s--;
+		_putchar(s[i]);
 	}
 
 	_putchar('\n');
