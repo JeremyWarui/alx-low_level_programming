@@ -8,21 +8,22 @@
 
 void rev_string(char *s)
 {
-	/*get current address/pointers */
+	int i, index = 0;
+	char str[1000000];
 
-	int first, last, len;
-	char str;
 
-	for (len = 0; *s != '\0'; len++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		s++;
+		str[i] = *(s + i);
 	}
 
-	for (first = 0, last = len - 1; first < last; first++, last--)
+	i--;
+
+	for (; i >= 0; i--)
 	{
-		str = s[first];
-		s[first] = s[last];
-		s[last] = str;
+		*(s + index) = *(str + i);
+		index++;
 	}
 
+	i++;
 }
