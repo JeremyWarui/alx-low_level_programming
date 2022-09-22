@@ -65,7 +65,10 @@ char *rot13(char *);
 
 void print_number(int n);
 
-
+/**
+  * print_buffer - 10bytes ata time
+  */
+void print_buffer(char *b, int size);
 
 
 
