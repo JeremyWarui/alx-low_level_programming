@@ -12,6 +12,10 @@ int _putchar(char c);
   */
 char *_strcat(char *dest, char *src);
 
+/**
+  * _strncat - concatenate two strings limited by n
+  */
 
+char *_strncat(char *dest, char *src, int n);
 
 #endif
