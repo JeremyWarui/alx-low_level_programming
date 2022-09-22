@@ -46,4 +46,13 @@ char *string_toupper(char *);
   */
 
 char *cap_string(char *);
+
+/**
+  * leet - encode a string
+  */
+
+char *leet(char *);
+
+
+
 #endif
