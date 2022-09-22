@@ -59,5 +59,15 @@ char *leet(char *);
 
 char *rot13(char *);
 
+/**
+  * print_number - to print integers
+  */
+
+void print_number(int n);
+
+
+
+
+
 
 #endif
