@@ -43,5 +43,8 @@ int _sqrt_recursion(int n);
   */
 int is_prime_number(int n);
 
+int cmp_start_end(char *start, char *end);
+int _strlen(char *s);
+int is_palindrome(char *s);
 
 #endif
