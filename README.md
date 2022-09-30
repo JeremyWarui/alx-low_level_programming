@@ -4,9 +4,24 @@
 
 These are scripts for the low level programming done for practice.
 
-1. Hello World in C
-2. Variables, Loops and conditionals
-3. Functions and nested loops
-4. Debugging
-5. More functions and nested loops
-6. Pointers and Arrays
+* Hello World in C
+
+* Variables, Loops and conditionals
+
+* Functions and nested loops
+
+* Debugging
+
+* More functions and nested loops
+
+* Pointers and Arrays
+
+* More Pointers, Strings and Arrays
+
+* More Pointers, Strings and Arrays
+
+* Recursion
+
+* Static libraries
+
+* Argc and Argv
