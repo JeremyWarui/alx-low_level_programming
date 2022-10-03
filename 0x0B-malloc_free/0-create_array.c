@@ -11,7 +11,7 @@
 
 char *create_array(unsigned int size, char c)
 {
-	unsigned int i;
+	int i;
 	char *list;
 
 	if (size == 0)
@@ -22,7 +22,7 @@ char *create_array(unsigned int size, char c)
 	if (list == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < (int)size; i++)
 		list[i] = c;
 
 	list[i] = '\0';
