@@ -22,7 +22,7 @@ int **alloc_grid(int width, int height)
 	if (grid == NULL)
 	{
 		free(grid);
-		return(NULL);
+		return (NULL);
 	}
 	/* allocate mem for each cols */
 	for (row = 0; row < height; row++)
@@ -30,9 +30,8 @@ int **alloc_grid(int width, int height)
 		grid[row] = malloc(width * sizeof(int));
 		if (grid[row] == NULL)
 		{
-			for (; row > 0; row--)
+			for (row--; row > 0; row--)
 				free(grid[row]);
-			
 			free(grid);
 			return (NULL);
 		}
