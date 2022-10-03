@@ -30,7 +30,7 @@ int **alloc_grid(int width, int height)
 	/* allocate mem for each cols */
 	for (row = 0; row < height; row++)
 	{
-		grid[row] = malloc(sizeof(int *) * width);
+		grid[row] = malloc(sizeof(int) * width);
 
 		if (grid[row] == NULL)
 		{
