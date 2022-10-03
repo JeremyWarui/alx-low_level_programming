@@ -25,3 +25,5 @@ These are scripts for the low level programming done for practice.
 * Static libraries
 
 * Argc and Argv
+
+* Malloc and Free functions
