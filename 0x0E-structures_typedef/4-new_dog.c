@@ -1,84 +1,53 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
-  * lenstr - get length of string
-  * @str: string
-  * Return: length
-  */
+ * new_dog - creates a new dog
+ * @name: name of the dog.
+ * @age: age of the dog.
+ * @owner: owner of the dog.
+ * Return: struct dog.
+ */
 
-int lenstr(char *str)
-{
-	int len = 0;
-
-	while (*str++)
-		len++;
-	return (len);
-}
-
-/**
-  * cpystr - copy string
-  * @dest: destination
-  * @src: source
-  * Return: string
-  */
-
-char *cpystr(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; *(src + i); i++)
-		*(dest + i) = *(src + i);
-
-	*dest++ = '\0';
-
-	return (dest);
-}
-
-/**
-  * new_dog - function that creates new dog
-  * @name: name of dog
-  * @age: age of dog
-  * @owner: name of owner
-  * Return: struct of new dog
-  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr_dog;
 
-	if (name == NULL || age < 0 || owner == NULL)
-		return (NULL);
+	int i, len_name, len_owner;
 
 	ptr_dog = malloc(sizeof(*ptr_dog));
 
-	if (ptr_dog == NULL)
-		return (NULL);
-
-	ptr_dog->name = malloc(sizeof(char) * (lenstr(name) + 1));
-
-	if (ptr_dog->name == NULL)
+	if (ptr_dog == NULL || !(name) || !(owner))
 	{
-		free(ptr_dog->name);
 		free(ptr_dog);
 		return (NULL);
 	}
+	for (len_name = 0; name[len_name]; len_name++)
+		;
 
-	ptr_dog->owner = malloc(sizeof(char) * (lenstr(owner) + 1));
+	for (len_owner = 0; owner[len_owner]; len_owner++)
+		;
 
-	if (ptr_dog->owner == NULL)
+	ptr_dog->name = malloc(len_name + 1);
+
+	ptr_dog->owner = malloc(len_owner + 1);
+
+	if (!(ptr_dog->name) || !(ptr_dog->owner))
 	{
-		free(ptr_dog->name);
 		free(ptr_dog->owner);
+		free(ptr_dog->name);
 		free(ptr_dog);
 		return (NULL);
 	}
 
-	/*copy string names/owner */
-
-	ptr_dog->name = cpystr(ptr_dog->name, name);
+	for (i = 0; i < len_name; i++)
+		ptr_dog->name[i] = name[i];
+	ptr_dog->name[i] = '\0';
 	ptr_dog->age = age;
-	ptr_dog->owner = cpystr(ptr_dog->owner, owner);
+	for (i = 0; i < len_owner; i++)
+		ptr_dog->owner[i] = owner[i];
+	ptr_dog->owner[i] = '\0';
 
 	return (ptr_dog);
 }
