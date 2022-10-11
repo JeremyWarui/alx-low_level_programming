@@ -46,7 +46,7 @@ char *cpystr(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr_dog;
-	
+
 	if (name == NULL || owner == NULL)
 		return (NULL);
 
@@ -59,8 +59,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	ptr_dog->name = malloc(sizeof(char) * (lenstr(name) + 1));
-	
-	if(ptr_dog->name == NULL)
+
+	if (ptr_dog->name == NULL)
 	{
 		free(ptr_dog);
 		return (NULL);
