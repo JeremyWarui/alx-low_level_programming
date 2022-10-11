@@ -9,9 +9,9 @@
 
 int lenstr(char *str)
 {
-	int len, i;
+	int len;
 
-	for (i = 0; *(str + i); i++)
+	while (*str++)
 		len++;
 	return (len);
 }
@@ -47,7 +47,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr_dog;
 
-	if (name == NULL || owner == NULL)
+	if (name == NULL  || age < 0 || owner == NULL)
 		return (NULL);
 
 	ptr_dog = malloc(sizeof(dog_t));
@@ -70,6 +70,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (ptr_dog->owner == NULL)
 	{
+		free(ptr_dog->name);
 		free(ptr_dog);
 		return (NULL);
 	}
