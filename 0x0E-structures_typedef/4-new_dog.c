@@ -9,7 +9,7 @@
 
 int lenstr(char *str)
 {
-	int len;
+	int len = 0;
 
 	while (*str++)
 		len++;
@@ -27,8 +27,8 @@ char *cpystr(char *dest, char *src)
 {
 	int i;
 
-	for (i = 0; *(src + i); i++)
-		*(dest + i) = *(src + i);
+	for (i = 0; src[i] i++)
+		dest[i] = src[i];
 
 	*dest++ = '\0';
 
@@ -47,7 +47,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr_dog;
 
-	if (name == NULL  || age < 0 || owner == NULL)
+	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
 
 	ptr_dog = malloc(sizeof(dog_t));
