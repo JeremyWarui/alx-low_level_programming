@@ -31,4 +31,9 @@ dog_t *new_dog(char *name, float age, char *owner);
 
 void free_dog(dog_t *d);
 
+int lenstr(char *str);
+
+char *cpystr(char *dest, char *src);
+
+
 #endif
