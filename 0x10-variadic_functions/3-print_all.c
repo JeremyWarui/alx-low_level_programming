@@ -87,7 +87,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				func[j].f(arg);
-				separator = ",  ";
+				separator = ", ";
 			}
 			j++;
 		}
