@@ -26,20 +26,19 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		}
 	}
 
-	if ((prev->next == NULL) || prev == NULL)
-	{
+	if ((index != 0 && prev->next == NULL) || prev == NULL)
 		return (-1);
-	}
+
+	temp = prev->next;
+
 	if (index != 0)
 	{
-		temp = prev->next;
 		prev->next = temp->next;
 		free(temp);
 	}
 
 	else
 	{
-		temp = prev->next;
 		free(prev);
 		*head = temp;
 	}
