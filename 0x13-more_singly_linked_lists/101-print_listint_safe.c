@@ -61,7 +61,7 @@ int isLoop(const listint_t *head)
 
 size_t print_listint_safe(const listint_t *head)
 {
-	int loop;
+	int loop, i;
 	int count = 0;
 	size_t nodes = 0;
 	const listint_t *tmp;
@@ -74,7 +74,7 @@ size_t print_listint_safe(const listint_t *head)
 	if (loop == 1)
 	{
 		count = count_nodes_before_loop(head);
-		for (loop = 0; loop < count; loop++)
+		for (i = 0; i < count; i++)
 		{
 			printf("[%p] %d\n", (void *)tmp, tmp->n);
 			nodes += 1;
