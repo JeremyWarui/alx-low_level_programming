@@ -11,13 +11,20 @@ listint_t *find_listint_loop(listint_t *head)
 	listint_t *p, *q;
 
 	p = q = head;
-	do {
+	while (p && q)
+	{
 		p = p->next;
 		q = q->next->next;
-	} while (p && q && p != q);
-
-	if (p == q)
-		return (p);
-	else
-		return (NULL);
+		if (p == q)
+		{
+			p = head;
+			while (p != q)
+			{
+				p = p->next;
+				q = q->next;
+			}
+			return (p);
+		}
+	}
+	return (NULL);
 }
