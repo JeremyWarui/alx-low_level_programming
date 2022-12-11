@@ -17,7 +17,7 @@ listint_t *find_listint_loop(listint_t *head)
 	} while (p && q && p != q);
 
 	if (p == q)
-		return (q);
+		return (p);
 	else
 		return (NULL);
 }
