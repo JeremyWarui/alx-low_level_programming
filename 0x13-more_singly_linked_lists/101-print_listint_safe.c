@@ -81,7 +81,7 @@ size_t print_listint_safe(const listint_t *head)
 			tmp = tmp->next;
 		}
 
-		printf("->[%p] %d\n", (void *)tmp, tmp->n);
+		printf("-> [%p] %d\n", (void *)tmp, tmp->n);
 	}
 	else if (loop == 0)
 	{
