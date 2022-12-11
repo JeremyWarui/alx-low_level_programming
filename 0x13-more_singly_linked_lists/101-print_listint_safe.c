@@ -67,7 +67,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *tmp;
 
 	if (head == NULL)
-		exit(98);
+		return (nodes);
 
 	loop = isLoop(head);
 
@@ -80,6 +80,8 @@ size_t print_listint_safe(const listint_t *head)
 			nodes += 1;
 			tmp = tmp->next;
 		}
+
+		printf("->[%p] %d\n", (void *)tmp, tmp->n);
 	}
 	else if (loop == 0)
 	{
