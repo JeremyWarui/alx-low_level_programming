@@ -1,5 +1,4 @@
-#include "main.h"
-
+#include "calc.h"
 
 /**
   * add - function to add two numbers
