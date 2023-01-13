@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -14,11 +13,12 @@
  * @value: The value corresponding to a key
  * @next: A pointer to the next node of the List
  */
+
 typedef struct hash_node_s
 {
-     char *key;
-     char *value;
-     struct hash_node_s *next;
+	char *key;
+	char *value;
+	struct hash_node_s *next;
 } hash_node_t;
 
 /**
@@ -31,8 +31,8 @@ typedef struct hash_node_s
  */
 typedef struct hash_table_s
 {
-     unsigned long int size;
-     hash_node_t **array;
+	unsigned long int size;
+	hash_node_t **array;
 } hash_table_t;
 
 /* functions */
@@ -43,7 +43,8 @@ unsigned long int hash_djb2(const unsigned char *str);
 /* 2-key_index.c */
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
 /* 3-hash_table_set.c */
-hash_node_t *add_n_hash(hash_node_t **, const char *, const char *);
+hash_node_t *add_node(hash_node_t **head, const char *key, const char *value);
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 /* 4-hash_table_get.c */
 char *hash_table_get(const hash_table_t *ht, const char *key);
 /* 5-hash_table_print.c */
