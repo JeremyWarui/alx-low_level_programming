@@ -45,7 +45,7 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int hsh_index;
-	hash_node_t *node;
+	hash_node_t **node;
 
 	if (ht == NULL)
 		return (0);
@@ -55,9 +55,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	hsh_index = key_index((unsigned char *)key, ht->size);
 
-	node = ht->array[hsh_index];
+	node = &(ht->array[hsh_index]);
 
-	if (add_node(&node, key, value) == NULL)
+	if (add_node(node, key, value) == NULL)
 		return (0);
 
 	return (1);
